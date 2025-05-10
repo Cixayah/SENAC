@@ -1,5 +1,8 @@
-from classe import Produto
-notebook = Produto('Notebook Dell i7', 5800.90 )
-input('Pressione qualquer tecla para ver a oferta: ')
-notebook.verProduto()
-print()
+from classe import Calculadora
+n1 = int(input('Informe o primeiro valor: '))
+n2 = int(input('Informe o segundo valor:'))
+calc = Calculadora(n1, n2)
+print(f'Soma: {calc.soma()}\n')
+print(f'Subtração: {calc.sub()}\n')
+print(f'Multiplicação: {calc.mult()}\n')
+print(f'Divisão: {calc.div()}\n')
