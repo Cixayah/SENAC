@@ -39,3 +39,17 @@ class produto_fisico(item_venda):
             print(f'Formato{self.formato}')
             print('Entrega: Download imediato!')
             
+class curso_online(item_venda):
+    def __init__(self, nome, preco_base, duracao_horas):
+        super().__init__(nome, preco_base)
+        self.duracao_horas=duracao_horas
+        
+    def calcular_preco_final(self):
+        if self.duracao_horas > 20:
+            return self.preco_base * 0.95 #5% off
+        return self.preco_base
+    
+    def exibir_detalhes(self):
+        super().exibir_detalhes()
+        print(f'Duração: {self.duracao_horas} horas')
+        print('Acesso: Plataforma online')
