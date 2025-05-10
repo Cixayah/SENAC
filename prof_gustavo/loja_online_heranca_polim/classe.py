@@ -17,7 +17,7 @@ class produto_fisico(item_venda):
         self.dimensao=dimensao
         
     def calcular_preco_final(self):
-        custo_envio = self.preco * 0.5
+        custo_envio = self.peso * 0.5
         return self.preco_base + custo_envio
 
     def exibir_detalhes(self):
@@ -25,15 +25,15 @@ class produto_fisico(item_venda):
         print(f'Peso: {self.peso} kg')
         print(f'Dimensão { self.dimensao}')
         
-    class livro_digital(item_venda):
-        def __init__(self, nome, preco_base, formato):
-            super().__init__(nome, preco_base)
-            self.formato=formato
-            
-        def calcular_preco_final(self):
-            desconto = self.preco_base * 0.10
-            return self.preco_base - desconto
+class livro_digital(item_venda):
+    def __init__(self, nome, preco_base, formato):
+        super().__init__(nome, preco_base)
+        self.formato=formato
         
+    def calcular_preco_final(self):
+        desconto = self.preco_base * 0.10
+        return self.preco_base - desconto
+    
         def exibir_detalhes(self):
             super().exibir_detalhes()
             print(f'Formato{self.formato}')
