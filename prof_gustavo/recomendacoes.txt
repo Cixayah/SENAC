@@ -1,2 +1,11 @@
 biblioteca python:
 LangChain
+
+enviar curriculo para:
+
+SOLINFTEC (agro automação/python)
+falar sobre: Denis Arroyo Alves
+
+Para estudar:
+IA SENSE
+Reconhecimento por IA
