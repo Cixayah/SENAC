@@ -1,5 +1,6 @@
 import subprocess
 import os
+import sys
 
 def clear_screen():
     if os.name == 'nt':
@@ -18,11 +19,11 @@ def escolher_jogo():
     clear_screen()
 
     if user_choice == "1":
-        subprocess.run(["python", "01_adivinhe_numero.py"])
+        subprocess.run([sys.executable, "01_adivinhe_numero.py"])
     elif user_choice == "2":
-        subprocess.run(["python", "02_PedraPapelTesoura.py"])
+        subprocess.run([sys.executable, "02_PedraPapelTesoura.py"])
     elif user_choice == "3":
-        subprocess.run(["python", "03_forca.py"])
+        subprocess.run([sys.executable, "03_forca.py"])
     else:
         print("Escolha inválida.")
 
